@@ -1,0 +1,60 @@
+{
+  "agent_name": "Image Generation Agent",
+  "agent_id": "69897afeebfd819b4b7010cd",
+  "agent_purpose": "Processes user text prompts, enhances them for optimal image generation, and returns structured JSON with enhanced_prompt, style_suggestion, size_recommendation, quality_notes, and original_prompt",
+  "description": "Image generation prompt enhancer agent that takes user text prompts, enriches them with detailed visual descriptions, and provides style, size, and quality recommendations for optimal image generation.",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "summary": "string",
+      "data": {
+        "enhanced_prompt": "string",
+        "style_suggestion": "string",
+        "size_recommendation": "string",
+        "quality_notes": "string",
+        "original_prompt": "string"
+      }
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "summary": "Sample enhanced prompt and image generation details",
+      "data": {
+        "enhanced_prompt": "A serene landscape featuring a crystal-clear mountain lake surrounded by pine trees, with snow-capped mountains in the background under a golden sunrise. Mist drifts over the water, and gentle ripples reflect the vibrant sky.",
+        "style_suggestion": "Realistic digital painting",
+        "size_recommendation": "1920x1080 pixels (HD horizontal)",
+        "quality_notes": "Use high resolution and fine details, prioritize realistic lighting and reflective surfaces for maximum visual impact.",
+        "original_prompt": "mountain lake at sunrise"
+      }
+    },
+    "metadata": {
+      "agent_name": "Image Generation Agent",
+      "timestamp": "2024-06-14T12:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-09T06:14:38.098424",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "summary": "Sample enhanced prompt and image generation details",
+      "data": {
+        "enhanced_prompt": "A serene landscape featuring a crystal-clear mountain lake surrounded by pine trees, with snow-capped mountains in the background under a golden sunrise. Mist drifts over the water, and gentle ripples reflect the vibrant sky.",
+        "style_suggestion": "Realistic digital painting",
+        "size_recommendation": "1920x1080 pixels (HD horizontal)",
+        "quality_notes": "Use high resolution and fine details, prioritize realistic lighting and reflective surfaces for maximum visual impact.",
+        "original_prompt": "mountain lake at sunrise"
+      }
+    },
+    "metadata": {
+      "agent_name": "Image Generation Agent",
+      "timestamp": "2024-06-14T12:00:00Z"
+    }
+  }
+}

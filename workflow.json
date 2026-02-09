@@ -1,0 +1,59 @@
+{
+  "workflow": {
+    "nodes": [
+      {
+        "id": "input_node",
+        "type": "Input",
+        "label": "User Prompt Input",
+        "nodeCategory": "input"
+      },
+      {
+        "id": "image_generation_agent",
+        "type": "Agent",
+        "label": "Image Generation Agent",
+        "nodeCategory": "agent",
+        "agent_id": "69897afeebfd819b4b7010cd",
+        "config": {
+          "name": "Image Generation Agent",
+          "description": "Processes user text prompts, enhances them for optimal image generation, and calls the image generation API to create visuals based on the description provided",
+          "provider": "OpenAI",
+          "model": "gpt-4.1",
+          "temperature": 0.7,
+          "top_p": 0.95,
+          "tool_configs": [],
+          "managed_agents": []
+        }
+      },
+      {
+        "id": "output_node",
+        "type": "Output",
+        "label": "Generated Image Output",
+        "nodeCategory": "end"
+      }
+    ],
+    "edges": [
+      {
+        "source": "input_node",
+        "target": "image_generation_agent"
+      },
+      {
+        "source": "image_generation_agent",
+        "target": "output_node"
+      }
+    ]
+  },
+  "agents": {
+    "image_generation_agent": {
+      "agent_id": "69897afeebfd819b4b7010cd",
+      "name": "Image Generation Agent",
+      "description": "Processes user text prompts, enhances them for optimal image generation, and calls the image generation API to create visuals based on the description provided",
+      "agent_role": "You are an AI image generation assistant that helps users create images from text descriptions.",
+      "agent_goal": "Process user text prompts, enhance them for optimal image generation quality, and generate detailed image descriptions and parameters.",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "trigger": "Generate Image on Main Screen"
+    }
+  }
+}

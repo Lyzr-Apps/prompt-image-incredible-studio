@@ -1,0 +1,14 @@
+{
+  "agents": [
+    {
+      "agent_id": "69897afeebfd819b4b7010cd",
+      "name": "Image Generation Agent",
+      "node_id": "image_generation_agent",
+      "status": "created",
+      "response_schema": "response_schemas/image_generation_agent_response.json"
+    }
+  ],
+  "workflow_status": "complete",
+  "total_agents": 1,
+  "created_agents": 1
+}

@@ -1,0 +1,33 @@
+{
+  "agent_name": "Image Generation Agent",
+  "agent_id": "69897afeebfd819b4b7010cd",
+  "test_input": "A futuristic cityscape at night with neon lights and flying cars",
+  "response": {
+    "status": "success",
+    "result": {
+      "summary": "Enhanced prompt for a vibrant, futuristic nighttime cityscape with neon lights and flying vehicles.",
+      "data": {
+        "enhanced_prompt": "A sprawling futuristic cityscape at night, illuminated with vibrant neon lights in hues of blue, pink, and purple. Sleek skyscrapers with glowing holographic advertisements rise into the dark sky. Numerous flying cars, with glowing underlights and trails, zoom between the buildings. The streets below are wet, reflecting the colorful lights. The atmosphere is lively and technologically advanced, evoking a cyberpunk aesthetic.",
+        "style_suggestion": "Cyberpunk digital art with high contrast and cinematic lighting",
+        "size_recommendation": "3840x2160 (4K UHD) for maximum detail and immersive quality",
+        "quality_notes": "Use high-resolution settings to capture intricate city details, neon effects, and atmospheric depth. Apply moderate cinematic blur and volumetric lighting for realism and mood.",
+        "original_prompt": "A futuristic cityscape at night with neon lights and flying cars"
+      }
+    },
+    "metadata": {
+      "agent_name": "Image Generation Agent",
+      "timestamp": "2024-06-13T17:25:42Z"
+    }
+  },
+  "field_types": {
+    "result.summary": "string",
+    "result.data": "object",
+    "result.data.enhanced_prompt": "string",
+    "result.data.style_suggestion": "string",
+    "result.data.size_recommendation": "string",
+    "result.data.quality_notes": "string",
+    "result.data.original_prompt": "string"
+  },
+  "status": "passed",
+  "timestamp": "2026-02-09T06:14:25.252856"
+}

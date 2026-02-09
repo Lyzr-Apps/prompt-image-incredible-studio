@@ -228,6 +228,20 @@ const setupFetchInterceptor = (): void => {
 
   window.fetch = async (input: RequestInfo | URL, init?: RequestInit): Promise<Response> => {
     const url = typeof input === 'string' ? input : input instanceof URL ? input.href : input.url;
+
+    // Skip interception for Next.js internal requests (HMR, Fast Refresh, static chunks, etc.)
+    // These must pass through unmodified to avoid breaking dev server communication
+    if (
+      url.includes('/_next/') ||
+      url.includes('__next') ||
+      url.includes('webpack-hmr') ||
+      url.includes('turbopack') ||
+      url.includes('on-demand-entries') ||
+      url.includes('.hot-update.')
+    ) {
+      return originalFetch!(input, init);
+    }
+
     const method = init?.method || 'GET';
     const startTime = Date.now();
 
